@@ -618,6 +618,202 @@
 
 
   <!-- ══════════════════════════════════════════════════════════════════
+       TESTIMONIAL SECTION
+       ══════════════════════════════════════════════════════════════════ -->
+  <div class="bg-white">
+    <!-- Mobile: vertical stack; Tablet+: 2-column (image left, quote right) -->
+    <div class="flex flex-col tablet:flex-row max-w-[1600px] mx-auto">
+
+      <!-- Sphere image: aspect-square on mobile, fills ~55% on tablet -->
+      <div class="relative aspect-square tablet:aspect-auto tablet:flex-[0_0_55%] overflow-hidden
+                  rounded-[30px] m-4 tablet:m-8 desktop:m-10 shrink-0">
+        <img src="images/imgImage2.png"
+             alt="A concrete sphere balanced between two larger spheres"
+             class="absolute inset-0 w-full h-full object-cover pointer-events-none rounded-[30px]" />
+      </div>
+
+      <!-- Quote -->
+      <section aria-label="Quote from a user about the product Area"
+               class="relative flex-1 border-t border-[#e9e9e9] tablet:border-t-0">
+        <div class="flex flex-col gap-[50px] items-start justify-center h-full
+                    pt-[40px] pb-[100px] px-[16px]
+                    tablet:px-[60px] tablet:py-[80px]
+                    desktop:px-[80px] desktop:py-[100px]">
+          <p class="font-serif not-italic text-[40px] text-black tracking-[-1.6px] leading-none w-full">
+            &#8220;I was skeptical, but Area has completely transformed the way I manage my business. The data visualizations are so clear and intuitive, and the platform is so easy to use. I can&#8217;t imagine running my company without it.&#8221;
+          </p>
+          <!-- Name + title -->
+          <div class="flex items-center gap-[8px] w-full">
+            <p class="font-sans font-normal text-[15px] text-black tracking-[-0.075px] leading-[1.4] shrink-0 whitespace-nowrap"
+               style="font-variation-settings: 'opsz' 14">John Smith</p>
+            <p class="font-mono font-normal text-[12px] text-[#485c11] tracking-[-0.12px] leading-[1.4] shrink-0">Head of Data</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       HOW IT WORKS — "Map Your Success"
+       ══════════════════════════════════════════════════════════════════ -->
+  <section class="bg-white relative w-full">
+    <!-- Top border -->
+    <div aria-hidden="true" class="absolute inset-0 border-t border-[#e9e9e9] pointer-events-none"></div>
+    <div class="max-w-[1600px] mx-auto overflow-x-auto overflow-y-clip">
+      <div class="flex flex-col gap-[80px] items-start pb-[100px] pt-[80px] px-[16px] tablet:px-[50px] desktop:px-[80px] w-full">
+
+        <!-- Header row: heading + "Discover More" button -->
+        <div class="flex flex-col items-center gap-[40px] tablet:flex-row tablet:items-center tablet:justify-between w-full">
+          <p class="font-serif not-italic text-[60px] text-black tracking-[-1.8px] leading-[0.9]
+                    text-center tablet:text-left whitespace-nowrap">Map Your Success</p>
+          <a href="#"
+             class="inline-flex items-center justify-center bg-[#dfecc6] rounded-full px-[22px] py-[14px]
+                    hover:bg-[#8e9c78] transition-colors shrink-0">
+            <span class="font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] whitespace-nowrap"
+                  style="font-variation-settings: 'opsz' 14">Discover More</span>
+          </a>
+        </div>
+
+        <!-- 3-up lockups: horizontal-scroll on mobile, equal 3-col on tablet+ -->
+        <div class="flex gap-[20px] items-start w-full">
+
+          <!-- Step 01 -->
+          <section aria-label="Step 1 of 3" class="relative flex-[1_0_0] min-h-px min-w-[240px] tablet:min-w-0">
+            <div aria-hidden="true" class="absolute inset-0 border-t border-[#e9e9e9] pointer-events-none"></div>
+            <div class="flex flex-col gap-[60px] items-start pb-[20px] pr-[30px] pt-[60px] w-full">
+              <p class="font-sans font-normal text-[80px] text-[#929292] tracking-[-3.2px] leading-none w-full"
+                 style="font-variation-settings: 'opsz' 14">01</p>
+              <div class="flex flex-col gap-[20px] items-start w-full">
+                <p class="font-serif not-italic text-[18px] text-black tracking-[-0.54px] leading-none w-full">Get Started</p>
+                <p class="font-sans font-normal text-[15px] text-[#6f6f6f] tracking-[-0.075px] leading-[1.4] w-full"
+                   style="font-variation-settings: 'opsz' 14">With our intuitive setup, you&#8217;re up and running in minutes.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Step 02 -->
+          <section aria-label="Step 2 of 3" class="relative flex-[1_0_0] min-h-px min-w-[240px] tablet:min-w-0">
+            <div aria-hidden="true" class="absolute inset-0 border-t border-[#e9e9e9] pointer-events-none"></div>
+            <div class="flex flex-col gap-[60px] items-start pb-[20px] pr-[30px] pt-[60px] w-full">
+              <p class="font-sans font-normal text-[80px] text-[#929292] tracking-[-3.2px] leading-none w-full"
+                 style="font-variation-settings: 'opsz' 14">02</p>
+              <div class="flex flex-col gap-[20px] items-start w-full">
+                <p class="font-serif not-italic text-[18px] text-black tracking-[-0.54px] leading-none w-full">Customize and Configure</p>
+                <p class="font-sans font-normal text-[15px] text-[#6f6f6f] tracking-[-0.075px] leading-[1.4] w-full"
+                   style="font-variation-settings: 'opsz' 14">Adapt Area to your specific requirements and preferences.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Step 03 -->
+          <section aria-label="Step 3 of 3" class="relative flex-[1_0_0] min-h-px min-w-[240px] tablet:min-w-0">
+            <div aria-hidden="true" class="absolute inset-0 border-t border-[#e9e9e9] pointer-events-none"></div>
+            <div class="flex flex-col gap-[60px] items-start pb-[20px] pr-[30px] pt-[60px] w-full">
+              <p class="font-sans font-normal text-[80px] text-[#929292] tracking-[-3.2px] leading-none w-full"
+                 style="font-variation-settings: 'opsz' 14">03</p>
+              <div class="flex flex-col gap-[20px] items-start w-full">
+                <p class="font-serif not-italic text-[18px] text-black tracking-[-0.54px] leading-none w-full">Grow Your Business</p>
+                <p class="font-sans font-normal text-[15px] text-[#6f6f6f] tracking-[-0.075px] leading-[1.4] w-full"
+                   style="font-variation-settings: 'opsz' 14">Make informed decisions to exceed your goals.</p>
+              </div>
+            </div>
+          </section>
+
+        </div><!-- /3-up -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       HERO IMAGE — full-width landscape (images/imgImage1.png)
+       ══════════════════════════════════════════════════════════════════ -->
+  <div class="bg-white pb-[40px] px-[16px] tablet:px-[50px] desktop:px-[80px]">
+    <div class="relative h-[600px] rounded-[30px] overflow-hidden w-full">
+      <img src="images/imgImage1.png"
+           alt="An eye-catching landscape of green"
+           class="absolute inset-0 w-full h-full object-cover pointer-events-none rounded-[30px]" />
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       CENTERED CTA — "Connect with us"  (#contact)
+       ══════════════════════════════════════════════════════════════════ -->
+  <section id="contact" class="bg-white relative w-full">
+    <!-- Top border (0.5px) -->
+    <div aria-hidden="true" class="absolute inset-0 border-t-[0.5px] border-[#e9e9e9] pointer-events-none"></div>
+    <div class="max-w-[1600px] mx-auto">
+      <div class="flex flex-col items-center gap-[40px] px-[16px] py-[120px]
+                  tablet:px-[80px] desktop:px-[200px] w-full">
+
+        <p class="font-serif not-italic text-[60px] text-black text-center tracking-[-1.8px] leading-[0.9] w-full">
+          Connect with us
+        </p>
+
+        <p class="font-sans font-normal text-[15px] text-[#6f6f6f] text-center tracking-[-0.075px] leading-[1.4]
+                  w-full tablet:max-w-[600px]"
+           style="font-variation-settings: 'opsz' 14">
+          Schedule a quick call to learn how Area can turn your regional data into a powerful advantage.
+        </p>
+
+        <!-- Learn More ↗ button: full-width on mobile, auto on tablet+ -->
+        <a href="#"
+           class="flex items-center justify-center gap-[6px] bg-[#485c11] rounded-full px-[22px] py-[14px]
+                  w-full tablet:w-auto hover:bg-[#8e9c78] transition-colors">
+          <span class="font-sans font-bold text-[14px] text-white tracking-[-0.35px] leading-[1.4] whitespace-nowrap"
+                style="font-variation-settings: 'opsz' 14">Learn More</span>
+          <svg class="shrink-0" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M3 11L11 3M11 3H5M11 3V9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════════════════════════════ -->
+  <footer class="bg-white border-t border-[#e9e9e9]">
+    <div class="max-w-[1600px] mx-auto px-[16px] tablet:px-[50px] desktop:px-[80px]">
+
+      <!-- Footer nav links -->
+      <div class="py-[30px] tablet:py-[40px]">
+        <nav class="flex items-center gap-[30px] tablet:gap-[50px]" aria-label="Footer navigation">
+          <a href="#benefits"
+             class="font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] hover:text-[#485c11] transition-colors"
+             style="font-variation-settings: 'opsz' 14">Benefits</a>
+          <a href="#specifications"
+             class="font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] hover:text-[#485c11] transition-colors"
+             style="font-variation-settings: 'opsz' 14">Specifications</a>
+          <a href="#how-to"
+             class="font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] hover:text-[#485c11] transition-colors"
+             style="font-variation-settings: 'opsz' 14">How-to</a>
+        </nav>
+      </div>
+
+      <!-- Credits: logo + copyright + All Rights Reserved -->
+      <div class="border-t border-[#e9e9e9] py-[20px] flex items-center gap-[16px]">
+        <img src="images/logo.jpeg" alt="Area logo" class="h-[40px] w-auto object-contain shrink-0" />
+        <div class="flex items-center gap-[4px] flex-1">
+          <p class="font-sans font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4]"
+             style="font-variation-settings: 'opsz' 14">&#169; Area.</p>
+          <p class="font-sans font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4]"
+             style="font-variation-settings: 'opsz' 14">2025</p>
+        </div>
+        <p class="font-sans font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap shrink-0"
+           style="font-variation-settings: 'opsz' 14">All Rights Reserved</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════════════════════════════
        NAVIGATION JS
        ══════════════════════════════════════════════════════════════════ -->
   <script>
