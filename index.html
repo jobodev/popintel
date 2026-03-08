@@ -1,108 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PopIntel Automations</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PopIntel</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Crimson Text · DM Sans variable · Roboto Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Roboto+Mono:wght@400&display=swap"
+    rel="stylesheet"
+  />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Compiled Tailwind CSS (run: npm run dev) -->
+  <link rel="stylesheet" href="dist/output.css" />
 </head>
 
-<body>
+<body class="bg-white">
 
-<!-- HEADER -->
-<header class="header">
-    <div class="container">
-        <img src="images/logo-light.jpeg" class="logo logo-light">
-        <img src="images/logo-dark.jpeg" class="logo logo-dark">
-        <nav class="nav">
-            <a href="Services.html">Services</a>
-            <a href="About.html">About</a>
-            <a href="Contact.html">Contact</a>
-        </nav>
+  <!-- ══════════════════════════════════════════════════════════════════
+       FIXED NAVIGATION
+       ══════════════════════════════════════════════════════════════════ -->
+  <header id="site-nav" class="fixed top-0 left-0 right-0 z-50 bg-white">
+
+    <!-- ── Tablet + Desktop nav bar (800px+) ───────────────────────── -->
+    <div class="hidden tablet:flex items-center justify-between max-w-[1500px] mx-auto px-6 pt-5 pb-20 h-[148px]">
+
+      <!-- Logo -->
+      <a href="/"
+         class="font-sans font-medium text-[30px] text-black tracking-[-1.5px] leading-[1.2] whitespace-nowrap shrink-0"
+         style="font-variation-settings: 'opsz' 14">
+        PopIntel
+      </a>
+
+      <!-- Nav links — desktop only (1280px+) -->
+      <nav class="hidden desktop:flex items-center gap-10" aria-label="Main navigation">
+        <a href="#benefits"
+           class="font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] hover:text-[#485c11] transition-colors"
+           style="font-variation-settings: 'opsz' 14">Benefits</a>
+        <a href="#specifications"
+           class="font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] hover:text-[#485c11] transition-colors"
+           style="font-variation-settings: 'opsz' 14">Specifications</a>
+        <a href="#how-to"
+           class="font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] hover:text-[#485c11] transition-colors"
+           style="font-variation-settings: 'opsz' 14">How-to</a>
+        <a href="#contact"
+           class="font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] hover:text-[#485c11] transition-colors"
+           style="font-variation-settings: 'opsz' 14">Contact Us</a>
+      </nav>
+
+      <!-- CTA button -->
+      <a href="#contact"
+         class="inline-flex items-center gap-[2px] bg-[#485c11] rounded-full px-[22px] py-[14px] hover:bg-[#8e9c78] transition-colors shrink-0">
+        <span class="font-sans font-bold text-[14px] text-white tracking-[-0.35px] leading-[1.4] whitespace-nowrap"
+              style="font-variation-settings: 'opsz' 14">Learn More</span>
+        <!-- ↗ arrow -->
+        <svg class="shrink-0 ml-[2px]" width="7" height="7" viewBox="0 0 7 7" fill="none" aria-hidden="true">
+          <path d="M1 6L6 1M6 1H3M6 1V4" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
     </div>
-</header>
 
-<!-- HERO SECTION -->
-<section class="hero">
-  <div class="hero-fade-top"></div>
-
-  <video class="hero-video" autoplay loop muted playsinline>
-    <source src="images/1250091-hd_1920_1080_25fps.mp4" type="video/mp4">
-  </video>
-
-    <div class="hero-content">
-    <h1>Population Health Automation & Analytics</h1>
-    <p>Transform UDS, HEDIS, Care Gaps & Incentive Performance with Automated Data Intelligence.</p>
-
-    <div class="hero-button-wrapper">
-        <a href="#contact" class="hero-btn">Get Started</a>
-    </div>
+    <!-- ── Mobile nav bar (<800px) ──────────────────────────────────── -->
+    <div class="flex tablet:hidden items-center justify-between px-5 py-5">
+      <span class="font-sans font-medium text-[30px] text-black tracking-[-2.4px] leading-[1.2]"
+            style="font-variation-settings: 'opsz' 14">PopIntel</span>
+      <button id="menu-btn"
+              class="p-1 shrink-0"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7H20M4 12H20M4 17H20" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
     </div>
 
-</section>
+  </header>
 
 
-<!-- SERVICES -->
-<section id="services" class="section">
-    <div class="container">
-        <h2 class="section-title">What We Offer</h2>
+  <!-- ══════════════════════════════════════════════════════════════════
+       MOBILE NAVIGATION OVERLAY
+       ══════════════════════════════════════════════════════════════════ -->
+  <div id="mobile-menu"
+       class="fixed top-0 left-0 right-0 z-[60] bg-white rounded-b-[20px] shadow-[0px_2px_4px_0px_rgba(0,0,0,0.05)] -translate-y-full transition-transform duration-300 tablet:hidden"
+       aria-hidden="true">
 
-        <div class="services-grid">
+    <!-- Top bar (logo + close) -->
+    <div class="flex items-start justify-between pt-5 pb-[50px] px-5">
+      <span class="font-sans font-medium text-[30px] text-black tracking-[-2.4px] leading-[1.2]"
+            style="font-variation-settings: 'opsz' 14">PopIntel</span>
+      <button id="menu-close" class="p-1" aria-label="Close navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6L18 18M6 18L18 6" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
 
-            <div class="service-card">
-                <h3>HEDIS & UDS Automation</h3>
-                <p>Automated Python pipelines that generate clean quality measure lists, dashboards, and monthly reports.</p>
-            </div>
+    <!-- Links + CTA -->
+    <div class="flex flex-col gap-[50px] px-5 pb-8">
+      <nav class="flex flex-col" aria-label="Mobile navigation">
+        <a href="#benefits"
+           class="py-[30px] font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] border-t border-[#e9e9e9]"
+           style="font-variation-settings: 'opsz' 14">Benefits</a>
+        <a href="#specifications"
+           class="py-[30px] font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] border-t border-[#e9e9e9]"
+           style="font-variation-settings: 'opsz' 14">Specifications</a>
+        <a href="#how-to"
+           class="py-[30px] font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] border-t border-[#e9e9e9]"
+           style="font-variation-settings: 'opsz' 14">How-to</a>
+        <a href="#contact"
+           class="py-[30px] font-sans font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] border-t border-[#e9e9e9]"
+           style="font-variation-settings: 'opsz' 14">Contact Us</a>
+      </nav>
 
-            <div class="service-card">
-                <h3>Incentive Forecasting</h3>
-                <p>Payor incentive projections for Medicaid, Medicare, and Commercial plans — up to $500k+ impact per year.</p>
-            </div>
+      <a href="#contact"
+         class="inline-flex items-center gap-[2px] bg-[#485c11] rounded-full px-[22px] py-[14px] self-start hover:bg-[#8e9c78] transition-colors">
+        <span class="font-sans font-bold text-[14px] text-white tracking-[-0.35px] leading-[1.4]"
+              style="font-variation-settings: 'opsz' 14">Learn More</span>
+        <svg class="shrink-0 ml-[2px]" width="7" height="7" viewBox="0 0 7 7" fill="none" aria-hidden="true">
+          <path d="M1 6L6 1M6 1H3M6 1V4" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
 
-            <div class="service-card">
-                <h3>Provider Scorecards</h3>
-                <p>Power BI dashboards for provider performance, care gaps, and high-risk patients.</p>
-            </div>
+  </div>
 
-            <div class="service-card">
-                <h3>Automation Consulting</h3>
-                <p>Rapid implementation, staff onboarding, and workflow optimization for Population Health teams.</p>
-            </div>
 
+  <!-- ══════════════════════════════════════════════════════════════════
+       HERO SECTION
+       ══════════════════════════════════════════════════════════════════ -->
+  <section id="hero" class="bg-white pt-[80px] tablet:pt-[148px] pb-20 overflow-x-clip">
+    <div class="max-w-[1500px] mx-auto px-6">
+
+      <!-- Hero heading -->
+      <h1 class="font-serif not-italic text-black leading-[0.9] mb-12 desktop:mb-20"
+          style="font-size: clamp(48px, 9.5vw, 140px); letter-spacing: clamp(-2px, -0.05em, -6.8px)">
+        Browse everything.
+      </h1>
+
+      <!-- iPad mockup + accent background -->
+      <div class="relative max-w-[960px] mx-auto">
+
+        <!-- Accent background rectangle (sage, offset right + down) -->
+        <div class="absolute top-[6%] bottom-[-5%] left-[18%] right-[-3%] bg-[#dfecc6] rounded-[20px] -z-10"
+             aria-hidden="true"></div>
+
+        <!-- iPad outer frame -->
+        <div class="relative bg-[#1c1c1e] rounded-[22px] p-[14px] shadow-[0_32px_80px_rgba(0,0,0,0.22)]">
+          <!-- Inner screen -->
+          <div class="rounded-[12px] overflow-hidden">
+            <img
+              src="https://picsum.photos/870/608"
+              alt="PopIntel analytics dashboard preview"
+              width="870"
+              height="608"
+              class="w-full h-auto block"
+              loading="eager"
+            />
+          </div>
         </div>
-    </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about" class="section about">
-    <div class="container">
-        <h2 class="section-title">Why PopIntel?</h2>
-        <p>
-            We build automated, scalable Population Health systems designed specifically for FQHCs.
-            Our solutions reduce manual work, unlock incentive revenue, and modernize quality operations —
-            all with tools you already own (Python, Microsoft 365, Power BI, Snowflake).
-        </p>
+      </div><!-- /iPad mockup -->
     </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section class="cta">
-    <div class="cta-container">
-        <h2>Want to Automate Your Population Health System?</h2>
-        <p>Let’s build your custom UDS/HEDIS automation, dashboards, and incentive engine.</p>
-        <a href="contact.html" class="cta-btn">Request a Demo</a>
-    </div>
-</section>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <p>© 2025 PopIntel Automations. All Rights Reserved.</p>
-</footer>
+  <!-- ══════════════════════════════════════════════════════════════════
+       NAVIGATION JS
+       ══════════════════════════════════════════════════════════════════ -->
+  <script>
+    const menuBtn   = document.getElementById('menu-btn');
+    const menuClose = document.getElementById('menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    function openMenu() {
+      mobileMenu.classList.remove('-translate-y-full');
+      mobileMenu.classList.add('translate-y-0');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add('-translate-y-full');
+      mobileMenu.classList.remove('translate-y-0');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    menuBtn.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+  </script>
 
 </body>
 </html>
