@@ -113,44 +113,32 @@
   </div>
 
 
-  <section id="hero" class="bg-[#a0f1bd] rounded-bl-[16px] rounded-br-[16px] relative w-full overflow-hidden pt-[80px] tablet:pt-[148px]">
-    <div class="flex flex-col items-center w-full">
-      <div class="flex flex-col items-center px-[40px] py-[100px] relative w-full">
+  <header id="hero" style="background-color: #a0f1bd; border-radius: 0 0 16px 16px; width: 100%; overflow: hidden; padding-top: 148px;">
+    <div style="display: flex; flex-direction: row; align-items: center; gap: 80px; max-width: 1500px; margin: 0 auto; padding: 100px 40px; box-sizing: border-box;">
 
-        <!-- ContentDesktop -->
-        <div class="flex gap-[80px] items-center max-w-[1500px] relative w-full">
+      <!-- Left column: text + button -->
+      <div style="flex: 1 0 0; display: flex; flex-direction: column; gap: 50px; align-items: flex-start; min-width: 0;">
 
-          <!-- BlockDesktop -->
-          <div class="flex flex-1 flex-col gap-[50px] items-start relative min-w-0">
-
-            <!-- TextDesktop -->
-            <div class="flex flex-col gap-[24px] items-start relative text-[#2e4f21] w-full"
-                 style="font-family: 'Work Sans', sans-serif; font-weight: 400">
-              <h1 class="block leading-none relative text-[80px] tracking-[-6.4px] w-full">Financial Clarity You Can Trust</h1>
-              <p class="leading-[1.1] relative text-[16px] tracking-[-0.72px] w-full">Trusted financial guidance for every stage of life and business since 1987</p>
-            </div>
-
-            <!-- ButtonOnDark -->
-            <div class="bg-[#2e4f21] cursor-pointer relative rounded-[51.575px] shrink-0">
-              <div class="flex flex-row items-center justify-center">
-                <div class="flex items-center justify-center p-[12px] relative">
-                  <p class="leading-[1.1] relative text-[12px] text-white tracking-[-0.54px] whitespace-nowrap"
-                     style="font-family: 'Work Sans', sans-serif; font-weight: 500">Connect with our experts</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- ImageDesktop -->
-          <div class="h-[411.495px] relative shrink-0 w-[429.005px]">
-            <img src="" alt="hero illustration" class="absolute inset-0 max-w-none object-cover pointer-events-none w-full h-full" />
-          </div>
-
+        <!-- Text block -->
+        <div style="display: flex; flex-direction: column; gap: 24px; color: #2e4f21; width: 100%;">
+          <h1 style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 80px; line-height: 1; letter-spacing: -6.4px; margin: 0;">Financial Clarity You Can Trust</h1>
+          <p style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.1; letter-spacing: -0.72px; margin: 0;">Trusted financial guidance for every stage of life and business since 1987</p>
         </div>
+
+        <!-- Button -->
+        <div style="background-color: #2e4f21; border-radius: 51.575px; cursor: pointer; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px;">
+          <span style="font-family: 'Work Sans', sans-serif; font-weight: 500; font-size: 12px; line-height: 1.1; color: #ffffff; letter-spacing: -0.54px; white-space: nowrap;">Connect with our experts</span>
+        </div>
+
       </div>
+
+      <!-- Right column: hero image placeholder -->
+      <div style="width: 429px; height: 412px; flex-shrink: 0; position: relative;">
+        <img src="" alt="hero illustration" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;" />
+      </div>
+
     </div>
-  </section>
+  </header>
 
   <section id="benefits" class="bg-white">
     <div class="max-w-[1500px] mx-auto px-4 tablet:px-8 desktop:px-10 pb-[100px]">
