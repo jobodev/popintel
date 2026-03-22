@@ -112,7 +112,6 @@
 
   </div>
 
-
   <header id="hero" style="background-color: #a0f1bd; border-radius: 0 0 16px 16px; width: 100%; overflow: hidden; padding-top: 148px;">
     <div style="display: flex; flex-direction: row; align-items: center; gap: 80px; max-width: 1500px; margin: 0 auto; padding: 100px 40px; box-sizing: border-box;">
 
@@ -121,8 +120,8 @@
 
         <!-- Text block -->
         <div style="display: flex; flex-direction: column; gap: 24px; color: #2e4f21; width: 100%;">
-          <h1 style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 80px; line-height: 1; letter-spacing: -6.4px; margin: 0;">Financial Clarity You Can Trust</h1>
-          <p style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.1; letter-spacing: -0.72px; margin: 0;">Trusted financial guidance for every stage of life and business since 1987</p>
+          <h1 style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 80px; line-height: 1; letter-spacing: -6.4px; margin: 0;">Why PopIntel?</h1>
+          <p style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.1; letter-spacing: -0.72px; margin: 0;">We build automated, scalable Population Health systems designed specifically for FQHCs. Transform UDS, HEDIS, and Care Gaps with tools you already own.</p>
         </div>
 
         <!-- Button -->
@@ -139,24 +138,6 @@
 
     </div>
   </header>
-
-  <section id="benefits" class="bg-white">
-    <div class="max-w-[1500px] mx-auto px-4 tablet:px-8 desktop:px-10 pb-[100px]">
-
-      <div class="relative flex flex-col gap-[50px] items-start pb-[60px] pt-[80px]">
-        <div aria-hidden="true" class="absolute border-[#e9e9e9] border-t-[0.5px] border-solid inset-0 pointer-events-none"></div>
-
-        <div class="flex flex-col gap-[30px] items-start pr-5">
-          <h2 class="font-mono font-normal text-[12px] text-[#485c11] tracking-[-0.12px] leading-[1.4]">What We Offer</h2>
-          <p class="font-serif not-italic text-[60px] text-black tracking-[-1.8px] leading-[0.9]">Why PopIntel?</p>
-          <p class="font-sans font-normal text-[15px] text-[#6f6f6f] tracking-[-0.075px] leading-[1.4]"
-             style="font-variation-settings: 'opsz' 14">
-            We build automated, scalable Population Health systems designed specifically for FQHCs. Transform UDS, HEDIS, and Care Gaps with tools you already own.
-          </p>
-        </div>
-
-    </div>
-  </section>
 
   <section id="how-to" class="bg-white">
     <div class="max-w-[1500px] mx-auto px-8 pb-[80px]">
@@ -446,33 +427,71 @@
 
   </section>
 
-  <div class="bg-white">
-    <div class="flex flex-col tablet:flex-row max-w-[1600px] mx-auto">
+  <!-- Testimonial section — translated from TestimonialSectionMobile/Tablet/Desktop in main.tsx -->
+  <div class="bg-[#f9f9f9] relative w-full">
+    <div class="flex flex-col items-center overflow-hidden w-full">
+      <div class="flex flex-col items-center p-[36px] tablet:p-[100px] w-full">
 
-      <div class="relative aspect-square tablet:aspect-auto tablet:flex-[0_0_55%] overflow-hidden
-                  rounded-[30px] m-4 tablet:m-8 desktop:m-10 shrink-0">
-        <img src="images/imgImage2.png"
-             alt="A concrete sphere balanced between two larger spheres"
-             class="absolute inset-0 w-full h-full object-cover pointer-events-none rounded-[30px]" />
-      </div>
+        <!-- Mobile: white card wrapper. Tablet+: transparent, no card. -->
+        <div class="bg-white tablet:bg-transparent max-w-[1200px] w-full">
+          <div class="flex flex-col items-center overflow-hidden w-full">
+            <div class="flex flex-col gap-[40px] tablet:gap-[120px] items-center w-full px-[16px] py-[24px] tablet:px-0 tablet:py-0">
 
-      <section aria-label="Quote from a user about PopIntel Automations"
-               class="relative flex-1 border-t border-[#e9e9e9] tablet:border-t-0">
-        <div class="flex flex-col gap-[50px] items-start justify-center h-full
-                    pt-[40px] pb-[100px] px-[16px]
-                    tablet:px-[60px] tablet:py-[80px]
-                    desktop:px-[80px] desktop:py-[100px]">
-          <p class="font-serif not-italic text-[36px] text-black tracking-[-1.6px] leading-tight w-full">
-            &#8220;PopIntel completely transformed our quality operations. Closing the Sunshine and Ambetter gaps used to be a massive manual burden. With their automation, we turned what used to be a $40k yearly trickle into a $460k windfall in a single month.&#8221;
-          </p>
-          <div class="flex items-center gap-[8px] w-full">
-            <p class="font-sans font-normal text-[15px] text-black tracking-[-0.075px] leading-[1.4] shrink-0 whitespace-nowrap"
-               style="font-variation-settings: 'opsz' 14">Director of Quality</p>
-            <p class="font-mono font-normal text-[12px] text-[#485c11] tracking-[-0.12px] leading-[1.4] shrink-0">Healthcare Network</p>
+              <!-- Heading -->
+              <h2 class="leading-[1.05] text-[60px] text-center tracking-[-4.2px] w-full"
+                  style="font-family: 'Work Sans', sans-serif; font-weight: 400; color: #2e4f21;">Hear From Our Happy Clients</h2>
+
+              <!-- Quotes area: stacked on mobile, side-by-side on tablet+ -->
+              <div class="flex flex-col tablet:flex-row tablet:gap-[28px] desktop:gap-[100px] items-start w-full">
+
+                <!-- Tab sidebar: horizontal row on mobile, vertical 310px column on tablet+ -->
+                <div class="flex flex-row tablet:flex-col items-start w-full tablet:w-[310px] tablet:shrink-0 tablet:rounded-[20px]">
+
+                  <!-- Single active tab (Director of Quality) -->
+                  <div class="bg-[#2e4f21] flex-1 tablet:flex-none relative rounded-[8px] tablet:h-[128px] tablet:w-[310px]">
+                    <div aria-hidden="true" class="absolute inset-0 border-t border-[#7d9276] pointer-events-none"></div>
+                    <div class="flex flex-col gap-[8px] tablet:gap-[16px] items-start px-[12px] py-[16px] tablet:px-[30px] tablet:py-[20px] relative w-full">
+                      <p class="leading-[1.05] text-white tracking-[-0.81px]"
+                         style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 18px;">Director of Quality</p>
+                      <p class="leading-[1.1] tracking-[-0.54px]"
+                         style="font-family: 'Work Sans', sans-serif; font-weight: 500; font-size: 12px; color: #d5e4d0;">Healthcare Network</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Quote content: below tab on mobile, right column with left border on tablet+ -->
+                <div class="relative pt-[40px] tablet:pt-0 tablet:flex-1 self-stretch w-full">
+                  <div aria-hidden="true" class="hidden tablet:block absolute inset-0 border-l border-[#2e4f21] pointer-events-none"></div>
+                  <div class="flex flex-col gap-[50px] items-start h-full tablet:pl-[40px] tablet:pr-[30px]">
+
+                    <p class="leading-[1.1] text-[30px] tracking-[-1.35px] w-full"
+                       style="font-family: 'Work Sans', sans-serif; font-weight: 400; color: #2e4f21;">&#8220;PopIntel completely transformed our quality operations. Closing the Sunshine and Ambetter gaps used to be a massive manual burden. With their automation, we turned what used to be a $40k yearly trickle into a $460k windfall in a single month.&#8221;</p>
+
+                    <!-- Byline -->
+                    <div class="flex gap-[28px] items-center shrink-0 w-full">
+                      <div class="h-[48px] w-[46px] relative rounded-[16px] shrink-0 overflow-hidden">
+                        <img src="images/imgImage2.png"
+                             alt="Director of Quality"
+                             class="absolute inset-0 w-full h-full object-cover pointer-events-none rounded-[16px]" />
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <p class="leading-[1.1] text-[16px] tracking-[-0.72px]"
+                           style="font-family: 'Work Sans', sans-serif; font-weight: 400; color: #2e4f21;">Director of Quality</p>
+                        <p class="leading-[1.1] text-[12px] tracking-[-0.54px]"
+                           style="font-family: 'Work Sans', sans-serif; font-weight: 500; color: #7d9276;">Healthcare Network</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
-      </section>
 
+      </div>
     </div>
   </div>
 
