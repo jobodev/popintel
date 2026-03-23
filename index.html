@@ -13,37 +13,40 @@
   />
 
   <link rel="stylesheet" href="dist/output.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          tablet: '800px',
+          desktop: '1280px',
+        }
+      }
+    }
+  </script>
 </head>
 
 <body class="bg-white">
 
   <header id="site-nav" class="fixed top-0 left-0 right-0 z-50" style="background-color: #0c1a62;">
 
-    <div class="hidden tablet:flex items-center justify-between max-w-[1500px] mx-auto px-6 pt-5 pb-20 h-[148px]">
+    <div class="hidden tablet:flex items-center justify-between max-w-[1500px] mx-auto px-6 py-4">
 
       <a href="/"
          class="font-['Work_Sans',sans-serif] font-medium text-[30px] text-white tracking-[-1.5px] leading-[1.2] whitespace-nowrap shrink-0"
          style="font-variation-settings: 'opsz' 14">
-        <img src="images/logo.png" alt="PopIntel Automations" class="h-[40px] w-auto object-contain shrink-0" />
+        <img src="images/logo.png" alt="PopIntel Automations" class="h-[65px] w-auto object-contain shrink-0" />
       </a>
 
-      <nav class="hidden desktop:flex items-center gap-10" aria-label="Main navigation">
-        <a href="#benefits"
-           class="font-['Work_Sans',sans-serif] font-bold text-[14px] text-white tracking-[-0.35px] leading-[1.4] hover:text-[#38b6ff] transition-colors"
-           style="font-variation-settings: 'opsz' 14">Services</a>
-        <a href="#specifications"
-           class="font-['Work_Sans',sans-serif] font-bold text-[14px] text-white tracking-[-0.35px] leading-[1.4] hover:text-[#38b6ff] transition-colors"
-           style="font-variation-settings: 'opsz' 14">Comparisons</a>
-        <a href="#how-to"
-           class="font-['Work_Sans',sans-serif] font-bold text-[14px] text-white tracking-[-0.35px] leading-[1.4] hover:text-[#38b6ff] transition-colors"
-           style="font-variation-settings: 'opsz' 14">Case Study</a>
-        <a href="#contact"
-           class="font-['Work_Sans',sans-serif] font-bold text-[14px] text-white tracking-[-0.35px] leading-[1.4] hover:text-[#38b6ff] transition-colors"
-           style="font-variation-settings: 'opsz' 14">Contact Us</a>
-      </nav>
+        <nav class="hidden desktop:flex items-center gap-10" aria-label="Main navigation">
+          <a href="#benefits" class="font-['Work_Sans',sans-serif] font-bold text-[18px] text-white tracking-[-0.35px] leading-[1.4] hover:text-[#38b6ff] transition-colors" style="font-variation-settings: 'opsz' 14">Services</a>
+          <a href="#specifications" class="font-['Work_Sans',sans-serif] font-bold text-[18px] text-white tracking-[-0.35px] leading-[1.4] hover:text-[#38b6ff] transition-colors" style="font-variation-settings: 'opsz' 14">Comparisons</a>
+          <a href="#how-to" class="font-['Work_Sans',sans-serif] font-bold text-[18px] text-white tracking-[-0.35px] leading-[1.4] hover:text-[#38b6ff] transition-colors" style="font-variation-settings: 'opsz' 14">Case Study</a>
+          <a href="#contact" class="font-['Work_Sans',sans-serif] font-bold text-[18px] text-white tracking-[-0.35px] leading-[1.4] hover:text-[#38b6ff] transition-colors" style="font-variation-settings: 'opsz' 14">Contact Us</a>
+        </nav>
 
-      <a href="#contact"
-         class="inline-flex items-center gap-[2px] bg-[#38b6ff] rounded-full px-[22px] py-[14px] hover:bg-white transition-colors shrink-0">
+      <a href="mailto:jacobrz030@gmail.com?subject=PopIntel%20Inquiry" class="inline-flex items-center gap-[4px] bg-[#38b6ff] rounded-full px-[24px] py-[12px] hover:bg-white hover:text-[#0c1a62] transition-colors shrink-0 group">
         <span class="font-['Work_Sans',sans-serif] font-bold text-[14px] text-white tracking-[-0.35px] leading-[1.4] whitespace-nowrap"
               style="font-variation-settings: 'opsz' 14">Contact Us</span>
         <svg class="shrink-0 ml-[2px]" width="7" height="7" viewBox="0 0 7 7" fill="none" aria-hidden="true">
@@ -110,28 +113,25 @@
 
   </div>
 
-  <header id="hero" style="background-color: #0c1a62; border-radius: 0 0 16px 16px; width: 100%; overflow: hidden; padding-top: 148px; margin-bottom: 40px;">
-    <div style="display: flex; flex-direction: row; align-items: center; gap: 80px; max-width: 1500px; margin: 0 auto; padding: 100px 40px; box-sizing: border-box;">
-
-      <!-- Left column: text + button -->
-      <div style="flex: 1 0 0; display: flex; flex-direction: column; gap: 50px; align-items: flex-start; min-width: 0;">
-
-        <!-- Text block -->
-        <div style="display: flex; flex-direction: column; gap: 24px; color: #ffffff; width: 100%;">
-          <h1 style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 80px; line-height: 1; letter-spacing: -6.4px; margin: 0;">Why PopIntel?</h1>
-          <p style="font-family: 'Work Sans', sans-serif; font-weight: 400; font-size: 32px; line-height: 1.1; letter-spacing: -0.72px; margin: 0;">We build automated, scalable Population Health systems designed specifically for FQHCs. Transform UDS, HEDIS, and Care Gaps with tools you already own.</p>
+<header id="hero" class="bg-[#0c1a62] rounded-b-[16px] w-full overflow-hidden pt-[100px] desktop:pt-[148px] mb-[40px]">
+    <div class="flex flex-col desktop:flex-row items-center justify-between gap-[40px] desktop:gap-[60px] max-w-[1500px] mx-auto px-[20px] tablet:px-[40px] py-[40px] desktop:py-[100px]">
+      
+      <div class="flex-1 flex flex-col gap-[30px] desktop:gap-[50px] items-start w-full min-w-0 desktop:max-w-[700px]">
+        <div class="flex flex-col gap-[16px] desktop:gap-[24px] text-white w-full">
+          <h1 class="font-['Work_Sans',sans-serif] font-normal text-[40px] tablet:text-[60px] desktop:text-[80px] leading-[1.1] tracking-tight desktop:tracking-[-6.4px] m-0">
+            Why PopIntel?
+          </h1>
+          <p class="font-['Work_Sans',sans-serif] font-normal text-[18px] tablet:text-[24px] desktop:text-[30px] leading-[1.3] m-0">
+            We build automated, scalable Population Health systems designed specifically for FQHCs. Transform UDS, HEDIS, and Care Gaps with tools you already own.
+          </p>
         </div>
-
-        <!-- Button -->
-        <div style="background-color: #0c1a62; border-radius: 51.575px; cursor: pointer; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px;">
-          <span style="font-family: 'Work Sans', sans-serif; font-weight: 500; font-size: 12px; line-height: 1.1; color: #ffffff; letter-spacing: -0.54px; white-space: nowrap;">Connect with our experts</span>
-        </div>
-
+          <a href="mailto:jacobrz030@gmail.com?subject=PopIntel%20Inquiry" class="bg-white hover:bg-[#e9e9e9] transition-colors rounded-[51px] cursor-pointer inline-flex items-center px-[32px] py-[16px] shadow-lg">
+            <span class="font-['Work_Sans',sans-serif] font-bold text-[18px] desktop:text-[24px] text-[#0c1a62]">Connect with our experts</span>
+         </a>
       </div>
 
-      <!-- Right column: hero image placeholder -->
-      <div style="width: 429px; height: 412px; flex-shrink: 0; position: relative;">
-        <img src="images/heroImage.png" alt="hero illustration" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;" />
+      <div class="hidden tablet:block tablet:w-[60%] desktop:w-[429px] aspect-square relative shrink-0">
+        <img src="images/heroImage.png" alt="hero illustration" class="absolute inset-0 w-full h-full object-contain pointer-events-none" />
       </div>
 
     </div>
@@ -194,11 +194,7 @@
               </p>
             </section>
 
-          </div><a href="#contact"
-             class="inline-flex items-center justify-center bg-[#c8e8ff] rounded-full px-[22px] py-[14px] self-start hover:bg-[#2a8fd4] hover:text-white transition-colors">
-            <span class="font-['Work_Sans',sans-serif] font-bold text-[14px] text-black tracking-[-0.35px] leading-[1.4] whitespace-nowrap"
-                  style="font-variation-settings: 'opsz' 14">Request a Demo</span>
-          </a>
+          </div>
 
         </div><div class="relative rounded-[30px] overflow-hidden shrink-0 h-[385px] desktop:h-auto desktop:self-stretch desktop:min-h-[500px]">
           <img alt="A render of three white cylindrical columns against a warm cream background"
@@ -211,14 +207,15 @@
   </section>
 
 
-  <section id="specifications" class="bg-white overflow-clip pb-[120px]">
-
+<section id="specifications" class="bg-white overflow-clip pb-[120px]">
     <div class="max-w-[1500px] mx-auto px-4 tablet:px-8">
-      <div class="overflow-x-auto">
-        <div class="flex items-start min-w-[600px] pl-2 gap-0">
+      
+      <div class="overflow-x-auto pb-6">
+        
+        <div class="flex items-start min-w-[960px] desktop:min-w-full pl-2 gap-0">
 
           <section aria-label="Features included in PopIntel's offering"
-                   class="relative bg-white rounded-[20px] shrink-0 flex-1 min-w-[200px]
+                   class="relative bg-white rounded-[20px] shrink-0 flex-1 min-w-[320px]
                           border border-[#e9e9e9] shadow-[0px_2px_8px_0px_rgba(0,0,0,0.08)]">
             <div class="h-[96px] relative border-b border-[#929292] flex items-center justify-center">
               <p class="font-['Work_Sans',sans-serif] font-medium text-[25px] text-black tracking-[-2px] leading-[1.2] whitespace-nowrap"
@@ -232,7 +229,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Automated Python pipelines</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Automated Python pipelines</p>
             </div>
             <div class="relative border-b border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px]">
               <div aria-label="Included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -242,7 +239,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Power BI Provider Scorecards</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Power BI Provider Scorecards</p>
             </div>
             <div class="relative border-b border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px]">
               <div aria-label="Included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -252,7 +249,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Ambetter/Sunshine gap targeting</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Ambetter/Sunshine gap targeting</p>
             </div>
             <div class="relative border-b border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px]">
               <div aria-label="Included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -262,7 +259,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Proactive incentive forecasting</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Proactive incentive forecasting</p>
             </div>
             <div class="relative border-b border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px]">
               <div aria-label="Included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -272,7 +269,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Custom FQHC deployment</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Custom FQHC deployment</p>
             </div>
             <div class="relative flex items-center gap-2 px-[30px] py-[32px]">
               <div aria-label="Included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -282,12 +279,12 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Rapid Staff Onboarding</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Rapid Staff Onboarding</p>
             </div>
           </section>
 
           <section aria-label="Features of Manual Processes"
-                   class="flex flex-col items-start shrink-0 flex-1 min-w-[200px] self-stretch">
+                   class="flex flex-col items-start shrink-0 flex-1 min-w-[320px] self-stretch bg-[#fbfbfb]">
             <div class="h-[96px] relative border-b border-[#929292] flex items-center justify-center w-full">
               <p class="font-['Work_Sans',sans-serif] font-medium text-[22px] text-[#6f6f6f] tracking-[-1.8px] leading-[1.2] whitespace-nowrap"
                  style="font-variation-settings: 'opsz' 14">Manual Work</p>
@@ -300,7 +297,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Excel spreadsheet tracking</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Excel spreadsheet tracking</p>
             </div>
             <div class="relative border-b border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px] w-full">
               <div aria-label="Not included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -310,7 +307,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">No live Dashboards</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">No live Dashboards</p>
             </div>
             <div class="relative border-b border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px] w-full">
               <div aria-label="Included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -320,7 +317,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Reactive gap closure</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Reactive gap closure</p>
             </div>
             <div class="relative border-b border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px] w-full">
               <div aria-label="Not included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -330,7 +327,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">No incentive forecasting</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">No incentive forecasting</p>
             </div>
             <div class="relative border-b border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px] w-full">
               <div aria-label="Included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -340,7 +337,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">High staff burnout</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">High staff burnout</p>
             </div>
             <div class="relative flex items-center gap-2 px-[30px] py-[32px] w-full">
               <div aria-label="Not included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -350,12 +347,12 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Slow monthly reporting</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Slow monthly reporting</p>
             </div>
           </section>
 
           <section aria-label="Features of Standard EMR Reports"
-                   class="flex flex-col items-start shrink-0 flex-1 min-w-[200px] self-stretch">
+                   class="flex flex-col items-start shrink-0 flex-1 min-w-[320px] self-stretch bg-[#fbfbfb]">
             <div class="h-[96px] relative border-b border-[#929292] flex items-center justify-center w-full">
               <p class="font-['Work_Sans',sans-serif] font-medium text-[21px] text-[#6f6f6f] tracking-[-1.7px] leading-[1.2] whitespace-nowrap">EMR Analytics</p>
             </div>
@@ -367,7 +364,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Built-in reporting</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Built-in reporting</p>
             </div>
             <div class="relative border-b border-l border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px] w-full">
               <div aria-label="Not included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -377,7 +374,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">No Payor-specific integration</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">No Payor-specific integration</p>
             </div>
             <div class="relative border-b border-l border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px] w-full">
               <div aria-label="Not included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -387,7 +384,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Limited UDS customization</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Limited UDS customization</p>
             </div>
             <div class="relative border-b border-l border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px] w-full">
               <div aria-label="Not included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -397,7 +394,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">No proactive forecasting</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">No proactive forecasting</p>
             </div>
             <div class="relative border-b border-l border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px] w-full">
               <div aria-label="Included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -407,7 +404,7 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Generic visual tracking</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Generic visual tracking</p>
             </div>
             <div class="relative border-l border-[#e9e9e9]/50 flex items-center gap-2 px-[30px] py-[32px] w-full">
               <div aria-label="Not included" class="overflow-clip shrink-0 size-[14px] relative">
@@ -417,12 +414,13 @@
                   </svg>
                 </div>
               </div>
-              <p class="font-['Work_Sans',sans-serif] font-normal text-[12px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Siloed data architecture</p>
+              <p class="font-['Work_Sans',sans-serif] font-normal text-[14px] text-black tracking-[-0.12px] leading-[1.4] whitespace-nowrap">Siloed data architecture</p>
             </div>
           </section>
 
-        </div></div></div>
-
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Testimonial section — translated from TestimonialSectionMobile/Tablet/Desktop in main.tsx -->
@@ -486,31 +484,34 @@
     </div>
   </div>
 
-  <section id="contact" class="bg-white relative w-full">
-    <div aria-hidden="true" class="absolute inset-0 border-t-[0.5px] border-[#e9e9e9] pointer-events-none"></div>
-    <div class="max-w-[1600px] mx-auto">
-      <div class="flex flex-col items-center gap-[40px] px-[16px] py-[120px]
-                  tablet:px-[80px] desktop:px-[200px] w-full">
-
-        <p class="font-['Work_Sans',sans-serif] not-italic text-[60px] text-black text-center tracking-[-1.8px] leading-[0.9] w-full">
+<section id="contact" class="bg-white relative w-full border-t border-[#e9e9e9]">
+    <div class="max-w-[800px] mx-auto">
+      <div class="flex flex-col items-center gap-[30px] px-[20px] py-[60px] tablet:py-[80px] desktop:py-[120px] w-full">
+        
+        <p class="font-['Work_Sans',sans-serif] text-[36px] tablet:text-[50px] desktop:text-[60px] text-black text-center tracking-tight leading-[1.1] w-full">
           Want to Automate Your Population Health System?
         </p>
 
-        <p class="font-['Work_Sans',sans-serif] font-normal text-[15px] text-[#6f6f6f] text-center tracking-[-0.075px] leading-[1.4]
-                  w-full tablet:max-w-[600px]"
-           style="font-variation-settings: 'opsz' 14">
-          Let’s build your custom UDS/HEDIS automation, dashboards, and incentive engine. Schedule a quick call today.
+        <p class="font-['Work_Sans',sans-serif] text-[16px] text-[#6f6f6f] text-center leading-[1.6] w-full tablet:max-w-[600px]">
+          Let’s build your custom UDS/HEDIS automation, dashboards, and incentive engine. Send us a message below to schedule a quick call.
         </p>
 
-        <a href="#"
-           class="flex items-center justify-center gap-[6px] bg-[#0c1a62] rounded-full px-[22px] py-[14px]
-                  w-full tablet:w-auto hover:bg-[#2a8fd4] transition-colors">
-          <span class="font-['Work_Sans',sans-serif] font-bold text-[14px] text-white tracking-[-0.35px] leading-[1.4] whitespace-nowrap"
-                style="font-variation-settings: 'opsz' 14">Contact Us</span>
-          <svg class="shrink-0" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-            <path d="M3 11L11 3M11 3H5M11 3V9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+        <form action="https://formsubmit.co/jacobrz030@gmail.com" method="POST" class="w-full flex flex-col gap-4 mt-6">
+          
+          <input type="hidden" name="_subject" value="New PopIntel Website Inquiry!">
+          
+          <div class="flex flex-col tablet:flex-row gap-4 w-full">
+            <input type="text" name="name" placeholder="Your Name" required class="flex-1 px-4 py-3 rounded-lg border border-[#e9e9e9] font-['Work_Sans',sans-serif] text-[15px] focus:outline-none focus:border-[#38b6ff] focus:ring-1 focus:ring-[#38b6ff]" />
+            <input type="email" name="email" placeholder="Your Email Address" required class="flex-1 px-4 py-3 rounded-lg border border-[#e9e9e9] font-['Work_Sans',sans-serif] text-[15px] focus:outline-none focus:border-[#38b6ff] focus:ring-1 focus:ring-[#38b6ff]" />
+          </div>
+          
+          <textarea name="message" rows="4" placeholder="How can we help you?" required class="w-full px-4 py-3 rounded-lg border border-[#e9e9e9] font-['Work_Sans',sans-serif] text-[15px] focus:outline-none focus:border-[#38b6ff] focus:ring-1 focus:ring-[#38b6ff]"></textarea>
+          
+          <button type="submit" class="bg-[#0c1a62] rounded-full px-[32px] py-[16px] w-full tablet:w-auto hover:bg-[#2a8fd4] transition-colors mt-[10px] self-center">
+            <span class="font-['Work_Sans',sans-serif] font-bold text-[16px] text-white">Send Message</span>
+          </button>
+
+        </form>
 
       </div>
     </div>

@@ -3,42 +3,39 @@ export default {
   content: ['./*.html', './**/*.html', './**/*.js'],
 
   theme: {
-    // Replace default breakpoints to match Figma spec exactly
+    // Breakpoints are perfect, kept exactly as you had them
     screens: {
       tablet:  '800px',   // 800–1279
       desktop: '1280px',  // 1280+
     },
 
     extend: {
-      // ── Color palette ──────────────────────────────────────────────
+      // ── PopIntel Color Palette ──────────────────────────────────────
       colors: {
-        'site-bg':        '#3E513E', // page background (dark green)
-        'bg-1':           '#FFFFFF', // Background 1
-
-        'accent-1':       '#485C11', // deep olive
-        'accent-2':       '#DFECC6', // light sage
-        'accent-3':       '#8E9C78', // mid sage
-        'accent-4':       '#000000', // black
-        'accent-5':       '#6F6F6F', // mid grey
-        'accent-6':       '#929292', // light grey
-
-        'text-headline':  '#000000',
-        'text-paragraph': '#6F6F6F',
-        'text-caption':   '#485C11',
-        'text-link':      '#000000',
-        'on-accent':      '#FFFFFF',
-
-        'divider':        '#E9E9E9',
+        'brand-dark':     '#0c1a62', // Deep blue (Hero/Header)
+        'brand-light':    '#38b6ff', // Bright blue (Buttons)
+        'brand-accent':   '#c8e8ff', // Pale blue (Demo Button)
+        'brand-hover':    '#2a8fd4', // Darker bright blue (Hover states)
+        
+        'bg-white':       '#FFFFFF', // Standard background
+        'bg-gray':        '#f9f9f9', // Light gray section background
+        
+        'text-main':      '#000000', // Black text
+        'text-muted':     '#6f6f6f', // Mid grey paragraph text
+        'text-light':     '#929292', // Light grey text/borders
+        
+        'divider':        '#e9e9e9', // Border lines
       },
 
-      // ── Typography ─────────────────────────────────────────────────
+      // ── PopIntel Typography ─────────────────────────────────────────
       fontFamily: {
-        serif: ['"Crimson Text"', 'Georgia', 'serif'],          // headlines
-        sans:  ['"DM Sans"', 'system-ui', 'sans-serif'],        // body / UI
-        mono:  ['"Roboto Mono"', 'monospace'],                  // labels
+        // Setting Work Sans as the primary sans font
+        sans:  ['"Work Sans"', 'system-ui', 'sans-serif'],
+        serif: ['"Crimson Text"', 'Georgia', 'serif'],
+        mono:  ['"Roboto Mono"', 'monospace'],
       },
 
-      // Font-size tokens mapped from the Figma Text Styles component
+      // Font-size tokens (kept from your original structure)
       fontSize: {
         'display': ['160px', { lineHeight: '0.9',  letterSpacing: '-6.8px'   }],
         'h1':      [ '60px', { lineHeight: '0.9',  letterSpacing: '-1.8px'   }],
