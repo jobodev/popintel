@@ -351,9 +351,6 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .gap-\[2px\] {
-    gap: 2px;
-  }
   .gap-\[4px\] {
     gap: 4px;
   }
@@ -498,17 +495,11 @@
   .px-\[20px\] {
     padding-inline: 20px;
   }
-  .px-\[22px\] {
-    padding-inline: 22px;
-  }
   .px-\[24px\] {
     padding-inline: 24px;
   }
   .px-\[30px\] {
     padding-inline: 30px;
-  }
-  .px-\[32px\] {
-    padding-inline: 32px;
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
@@ -524,9 +515,6 @@
   }
   .py-\[12px\] {
     padding-block: 12px;
-  }
-  .py-\[14px\] {
-    padding-block: 14px;
   }
   .py-\[16px\] {
     padding-block: 16px;
@@ -584,10 +572,6 @@
   }
   .font-\[\'Work_Sans\'\,sans-serif\] {
     font-family: 'Work Sans',sans-serif;
-  }
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
   }
   .text-\[12px\] {
     font-size: 12px;
@@ -758,10 +742,17 @@
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
-  .hover\:bg-\[\#2a8fd4\] {
+  .group-hover\:text-\[\#0c1a62\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: #0c1a62;
+      }
+    }
+  }
+  .hover\:bg-\[\#0c1a62\] {
     &:hover {
       @media (hover: hover) {
-        background-color: #2a8fd4;
+        background-color: #0c1a62;
       }
     }
   }
@@ -831,11 +822,6 @@
   .tablet\:w-\[310px\] {
     @media (width >= 800px) {
       width: 310px;
-    }
-  }
-  .tablet\:w-\[480px\] {
-    @media (width >= 800px) {
-      width: 480px;
     }
   }
   .tablet\:w-auto {
