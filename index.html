@@ -13,18 +13,7 @@
   />
 
   <link rel="stylesheet" href="dist/output.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
   
-  <script>
-    tailwind.config = {
-      theme: {
-        screens: {
-          tablet: '800px',
-          desktop: '1280px',
-        }
-      }
-    }
-  </script>
 </head>
 
 <body class="bg-white">
@@ -113,25 +102,28 @@
 
   </div>
 
-<header id="hero" class="bg-[#0c1a62] rounded-b-[16px] w-full overflow-hidden pt-[100px] desktop:pt-[148px] mb-[40px]">
-    <div class="flex flex-col desktop:flex-row items-center justify-between gap-[40px] desktop:gap-[60px] max-w-[1500px] mx-auto px-[20px] tablet:px-[40px] py-[40px] desktop:py-[100px]">
-      
-      <div class="flex-1 flex flex-col gap-[30px] desktop:gap-[50px] items-start w-full min-w-0 desktop:max-w-[700px]">
-        <div class="flex flex-col gap-[16px] desktop:gap-[24px] text-white w-full">
-          <h1 class="font-['Work_Sans',sans-serif] font-normal text-[40px] tablet:text-[60px] desktop:text-[80px] leading-[1.1] tracking-tight desktop:tracking-[-6.4px] m-0">
-            Why PopIntel?
-          </h1>
-          <p class="font-['Work_Sans',sans-serif] font-normal text-[18px] tablet:text-[24px] desktop:text-[30px] leading-[1.3] m-0">
-            We build automated, scalable Population Health systems designed specifically for FQHCs. Transform UDS, HEDIS, and Care Gaps with tools you already own.
-          </p>
+  <header id="hero" class="bg-[#0c1a62] rounded-b-2xl w-full overflow-hidden pt-20 tablet:pt-[148px] mb-10">
+    <div class="flex flex-col tablet:flex-row items-center gap-10 tablet:gap-20 max-w-[1500px] mx-auto px-5 py-10 tablet:px-10 tablet:py-[100px]">
+
+      <!-- Left column: text + button -->
+      <div class="w-full tablet:flex-1 flex flex-col gap-[50px] items-start min-w-0">
+
+        <!-- Text block -->
+        <div class="flex flex-col gap-6 text-white w-full">
+          <h1 class="font-['Work_Sans',sans-serif] font-normal text-[40px] tablet:text-[80px] leading-none tracking-[-2px] tablet:tracking-[-6.4px] m-0">Why PopIntel?</h1>
+          <p class="font-['Work_Sans',sans-serif] font-normal text-[18px] tablet:text-[32px] leading-[1.1] tracking-[-0.36px] tablet:tracking-[-0.72px] m-0">We build automated, scalable Population Health systems designed specifically for FQHCs. Transform UDS, HEDIS, and Care Gaps with tools you already own.</p>
         </div>
-          <a href="mailto:jacobrz030@gmail.com?subject=PopIntel%20Inquiry" class="bg-white hover:bg-[#e9e9e9] transition-colors rounded-[51px] cursor-pointer inline-flex items-center px-[32px] py-[16px] shadow-lg">
-            <span class="font-['Work_Sans',sans-serif] font-bold text-[18px] desktop:text-[24px] text-[#0c1a62]">Connect with our experts</span>
-         </a>
+
+        <!-- Button -->
+        <div class="bg-[#0c1a62] rounded-full cursor-pointer shrink-0 inline-flex items-center justify-center py-3 px-5">
+          <span class="font-['Work_Sans',sans-serif] font-medium text-xs leading-[1.1] text-white tracking-[-0.54px] whitespace-nowrap">Connect with our experts</span>
+        </div>
+
       </div>
 
-      <div class="hidden tablet:block tablet:w-[60%] desktop:w-[429px] aspect-square relative shrink-0">
-        <img src="images/heroImage.png" alt="hero illustration" class="absolute inset-0 w-full h-full object-contain pointer-events-none" />
+      <!-- Right column: hero image -->
+      <div class="w-full tablet:w-[480px] aspect-[3/2] relative shrink-0">
+        <img src="images/doctorhero.png" alt="hero illustration" class="absolute inset-0 w-full h-full object-cover pointer-events-none" />
       </div>
 
     </div>
