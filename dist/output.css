@@ -569,6 +569,9 @@
   .text-\[14px\] {
     font-size: 14px;
   }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
   .text-\[16px\] {
     font-size: 16px;
   }
@@ -622,6 +625,10 @@
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
+  }
+  .tracking-\[-0\.7px\] {
+    --tw-tracking: -0.7px;
+    letter-spacing: -0.7px;
   }
   .tracking-\[-0\.12px\] {
     --tw-tracking: -0.12px;
@@ -924,6 +931,11 @@
       padding-inline: 30px;
     }
   }
+  .tablet\:px-\[40px\] {
+    @media (width >= 800px) {
+      padding-inline: 40px;
+    }
+  }
   .tablet\:px-\[50px\] {
     @media (width >= 800px) {
       padding-inline: 50px;
@@ -937,6 +949,11 @@
   .tablet\:py-\[20px\] {
     @media (width >= 800px) {
       padding-block: 20px;
+    }
+  }
+  .tablet\:py-\[32px\] {
+    @media (width >= 800px) {
+      padding-block: 32px;
     }
   }
   .tablet\:py-\[100px\] {
@@ -964,6 +981,21 @@
       padding-left: 40px;
     }
   }
+  .tablet\:text-\[18px\] {
+    @media (width >= 800px) {
+      font-size: 18px;
+    }
+  }
+  .tablet\:text-\[24px\] {
+    @media (width >= 800px) {
+      font-size: 24px;
+    }
+  }
+  .tablet\:text-\[30px\] {
+    @media (width >= 800px) {
+      font-size: 30px;
+    }
+  }
   .tablet\:text-\[32px\] {
     @media (width >= 800px) {
       font-size: 32px;
@@ -983,6 +1015,18 @@
     @media (width >= 800px) {
       --tw-tracking: -0.72px;
       letter-spacing: -0.72px;
+    }
+  }
+  .tablet\:tracking-\[-1\.35px\] {
+    @media (width >= 800px) {
+      --tw-tracking: -1.35px;
+      letter-spacing: -1.35px;
+    }
+  }
+  .tablet\:tracking-\[-4\.2px\] {
+    @media (width >= 800px) {
+      --tw-tracking: -4.2px;
+      letter-spacing: -4.2px;
     }
   }
   .tablet\:tracking-\[-6\.4px\] {
