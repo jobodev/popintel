@@ -20,18 +20,19 @@
     button { cursor: pointer; border: none; background: none; }
     input, textarea, button { font-family: inherit; }
 
-    /* ── Your exact tokens from tailwind.config.js ──────── */
+    /* ── Tokens — matched to the PopIntel.ai business card ── */
     :root {
-      --brand-dark:   #0c1a62;
-      --brand-light:  #38b6ff;
-      --brand-accent: #c8e8ff;
-      --brand-hover:  #2a8fd4;
+      --brand-dark:   #0d1f28;   /* deep teal-charcoal (card background) */
+      --brand-darker: #0a171e;   /* extra depth for footer / layering */
+      --brand-light:  #2dc9b3;   /* teal accent (card ".ai" / title) */
+      --brand-accent: #c3f1ea;   /* light teal wash */
+      --brand-hover:  #16a58f;   /* deeper teal for hovers */
       --bg-white:     #ffffff;
-      --bg-gray:      #f9f9f9;
-      --text-main:    #000000;
-      --text-muted:   #6f6f6f;
-      --text-light:   #929292;
-      --divider:      #e9e9e9;
+      --bg-gray:      #f7faf9;
+      --text-main:    #0d1f28;
+      --text-muted:   #3c4744;   /* darkened for contrast on light sections */
+      --text-light:   #64706d;   /* darkened for contrast on light sections */
+      --divider:      #e7edeb;
       --nav-h:        80px;
       --font-sans:    'Work Sans', system-ui, sans-serif;
       --font-serif:   'Crimson Text', Georgia, serif;
@@ -120,10 +121,10 @@
       align-items: center;
       gap: 6px;
       background: var(--brand-light);
-      color: #fff;
+      color: var(--brand-dark);
       font-family: var(--font-sans);
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       padding: 10px 22px;
       border-radius: 999px;
       transition: background 0.2s, color 0.2s;
@@ -178,10 +179,10 @@
       padding: 14px;
       text-align: center;
       background: var(--brand-light);
-      color: #fff;
+      color: var(--brand-dark);
       font-family: var(--font-sans);
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       border-radius: 999px;
     }
 
@@ -196,7 +197,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 75% 45%, rgba(56,182,255,0.09) 0%, transparent 58%);
+      background: radial-gradient(ellipse at 75% 45%, rgba(45,201,179,0.10) 0%, transparent 58%);
       pointer-events: none;
     }
     .hero-grid {
@@ -212,10 +213,10 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      border: 1px solid rgba(56,182,255,0.35);
+      border: 1px solid rgba(45,201,179,0.35);
       border-radius: 999px;
       padding: 7px 18px;
-      background: rgba(56,182,255,0.07);
+      background: rgba(45,201,179,0.07);
       width: fit-content;
     }
     .hero-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-light); flex-shrink: 0; }
@@ -266,7 +267,7 @@
     .feat-icon {
       width: 28px; height: 28px;
       border-radius: 8px;
-      background: rgba(56,182,255,0.18);
+      background: rgba(45,201,179,0.18);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -281,10 +282,10 @@
       align-items: center;
       gap: 6px;
       background: var(--brand-light);
-      color: #fff;
+      color: var(--brand-dark);
       font-family: var(--font-sans);
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       padding: 13px 26px;
       border-radius: 999px;
       transition: background 0.2s, color 0.2s;
@@ -315,7 +316,7 @@
     .trust-shield {
       width: 20px; height: 20px;
       border-radius: 50%;
-      border: 1px solid rgba(56,182,255,0.8);
+      border: 1px solid rgba(45,201,179,0.8);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -331,8 +332,8 @@
       aspect-ratio: 4/3;
       border-radius: 18px 18px 0 0;
       overflow: hidden;
-      background: rgba(56,182,255,0.06);
-      border: 1px solid rgba(56,182,255,0.13);
+      background: rgba(45,201,179,0.06);
+      border: 1px solid rgba(45,201,179,0.13);
       border-bottom: none;
     }
     .hero-img-frame img { width: 100%; height: 100%; object-fit: cover; }
@@ -340,7 +341,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, transparent 55%, rgba(12,26,98,0.5) 100%);
+      background: linear-gradient(to bottom, transparent 55%, rgba(13,31,40,0.55) 100%);
       pointer-events: none;
     }
 
@@ -361,12 +362,12 @@
       box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     }
     .dc-label { font-size: 11px; color: var(--text-muted); margin-bottom: 5px; font-weight: 500; }
-    .dc-val-green { font-family: var(--font-sans); font-weight: 800; font-size: 20px; color: #22c55e; letter-spacing: -1px; line-height: 1; }
+    .dc-val-green { font-family: var(--font-sans); font-weight: 800; font-size: 20px; color: #16a34a; letter-spacing: -1px; line-height: 1; }
     .dc-val-dark  { font-family: var(--font-sans); font-weight: 800; font-size: 18px; color: var(--brand-dark); letter-spacing: -0.8px; line-height: 1; }
     .dc-sub   { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
-    .dc-trend { font-size: 11px; color: #22c55e; margin-top: 3px; font-weight: 600; }
+    .dc-trend { font-size: 11px; color: #16a34a; margin-top: 3px; font-weight: 600; }
     .dc-bars  { display: flex; align-items: flex-end; gap: 3px; height: 24px; margin-top: 8px; }
-    .bar      { border-radius: 2px 2px 0 0; width: 10px; background: #dbeafe; }
+    .bar      { border-radius: 2px 2px 0 0; width: 10px; background: #c3ede6; }
     .bar.hi   { background: var(--brand-light); }
 
     /* ── SECTIONS shared ────────────────────────────────── */
@@ -388,6 +389,69 @@
       line-height: 1.7;
     }
 
+    /* ── SOLUTIONS / TOOLS ──────────────────────────────── */
+    .tools-head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: end;
+      margin-bottom: 8px;
+    }
+    .tools-head p.section-sub { max-width: 460px; }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 44px;
+    }
+    .tool-card {
+      background: #fff;
+      border: 1px solid var(--divider);
+      border-radius: 18px;
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 44px rgba(13,31,40,0.10);
+      border-color: var(--brand-light);
+    }
+    .tool-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .tool-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: var(--brand-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .tool-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--brand-hover);
+      background: var(--brand-accent);
+      padding: 5px 11px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .tool-t { font-size: 18px; font-weight: 800; color: var(--brand-dark); letter-spacing: -0.4px; line-height: 1.2; }
+    .tool-d { font-size: 14px; color: var(--text-muted); line-height: 1.6; flex: 1; }
+    .tool-meta {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 2px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--brand-hover);
+    }
+
     /* ── IMPACT ─────────────────────────────────────────── */
     .impact-grid {
       display: grid;
@@ -401,7 +465,7 @@
       gap: 5px;
       font-size: 15px;
       font-weight: 600;
-      color: var(--brand-light);
+      color: var(--brand-hover);
       margin-top: 24px;
       transition: gap 0.2s;
     }
@@ -433,8 +497,8 @@
     .step-icon {
       width: 60px; height: 60px;
       border-radius: 50%;
-      background: #eff6ff;
-      border: 2px solid #bfdbfe;
+      background: #e9faf6;
+      border: 2px solid #a5e5da;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -443,7 +507,7 @@
       z-index: 2;
       flex-shrink: 0;
     }
-    .step-n { font-size: 11px; font-weight: 700; color: var(--brand-light); letter-spacing: 0.5px; margin-bottom: 7px; }
+    .step-n { font-size: 11px; font-weight: 700; color: var(--brand-hover); letter-spacing: 0.5px; margin-bottom: 7px; }
     .step-t { font-size: 15px; font-weight: 700; color: var(--brand-dark); margin-bottom: 8px; }
     .step-d { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
@@ -467,7 +531,7 @@
       font-family: var(--font-sans);
       font-weight: 800;
       font-size: 34px;
-      color: var(--divider);
+      color: #9aa6a3;
       line-height: 1;
       padding-top: 2px;
     }
@@ -483,7 +547,7 @@
       flex-shrink: 0;
       margin-top: 4px;
     }
-    .how-step:last-child .how-arrow { background: #22c55e; }
+    .how-step:last-child .how-arrow { background: #16a34a; }
 
     /* ── COMPARE ────────────────────────────────────────── */
     .compare-header {
@@ -504,7 +568,7 @@
     .check-dot {
       width: 20px; height: 20px;
       border-radius: 50%;
-      background: #dcfce7;
+      background: #d1f5ec;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -540,7 +604,7 @@
       color: var(--text-main);
     }
     tbody td:first-child { text-align: left; }
-    tbody td.t-feat { background: rgba(12,26,98,0.03); }
+    tbody td.t-feat { background: rgba(13,31,40,0.03); }
     tbody tr:last-child td { border-bottom: none; }
     .ic-yes {
       display: inline-flex;
@@ -548,8 +612,8 @@
       justify-content: center;
       width: 22px; height: 22px;
       border-radius: 50%;
-      background: #dcfce7;
-      color: #22c55e;
+      background: #d1f5ec;
+      color: var(--brand-hover);
       font-size: 11px;
       font-weight: 700;
     }
@@ -571,7 +635,7 @@
       top: -140px; right: -140px;
       width: 520px; height: 520px;
       border-radius: 50%;
-      background: rgba(56,182,255,0.05);
+      background: rgba(45,201,179,0.06);
       pointer-events: none;
     }
     .testimonial-grid {
@@ -583,7 +647,7 @@
     .test-quote-mark {
       font-family: var(--font-serif);
       font-size: 90px;
-      color: rgba(56,182,255,0.6);
+      color: rgba(45,201,179,0.65);
       line-height: 0.7;
       display: block;
       margin-bottom: 20px;
@@ -603,8 +667,8 @@
     .test-avatar {
       width: 50px; height: 50px;
       border-radius: 50%;
-      background: rgba(56,182,255,0.18);
-      border: 2px solid rgba(56,182,255,0.3);
+      background: rgba(45,201,179,0.18);
+      border: 2px solid rgba(45,201,179,0.3);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -675,7 +739,7 @@
     .finput::placeholder, .ftextarea::placeholder { color: var(--text-light); }
     .finput:focus, .ftextarea:focus {
       border-color: var(--brand-light);
-      box-shadow: 0 0 0 3px rgba(56,182,255,0.14);
+      box-shadow: 0 0 0 3px rgba(45,201,179,0.16);
       background: #fff;
     }
     .ftextarea { resize: vertical; }
@@ -683,17 +747,17 @@
       width: 100%;
       padding: 15px;
       background: var(--brand-light);
-      color: #fff;
+      color: var(--brand-dark);
       font-family: var(--font-sans);
       font-size: 15px;
       font-weight: 700;
       border-radius: 999px;
       border: none;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: background 0.2s, color 0.2s;
       margin-top: 4px;
     }
-    .fsubmit:hover { background: var(--brand-dark); }
+    .fsubmit:hover { background: var(--brand-dark); color: #fff; }
     .form-note {
       font-size: 11px;
       color: var(--text-light);
@@ -706,7 +770,7 @@
 
     /* ── FOOTER ─────────────────────────────────────────── */
     footer {
-      background: var(--brand-dark);
+      background: var(--brand-darker);
       border-top: 1px solid rgba(255,255,255,0.07);
     }
     .foot-inner {
@@ -743,10 +807,10 @@
       align-items: center;
       gap: 6px;
       background: var(--brand-light);
-      color: #fff;
+      color: var(--brand-dark);
       font-family: var(--font-sans);
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       padding: 10px 20px;
       border-radius: 999px;
       transition: background 0.2s, color 0.2s;
@@ -754,6 +818,9 @@
     .foot-book:hover { background: #fff; color: var(--brand-dark); }
 
     /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1099px) {
+      .tools-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 799px) {
       :root { --px: 20px; --section-py: 64px; }
       .nav-links, .nav-cta { display: none; }
@@ -762,6 +829,8 @@
       .hero-right { display: none; }
       .hero-left { padding-bottom: 40px; }
       .hero-sub { max-width: 100%; }
+      .tools-head { grid-template-columns: 1fr; gap: 20px; }
+      .tools-grid { grid-template-columns: 1fr; }
       .impact-grid { grid-template-columns: 1fr; gap: 40px; }
       .step-flow { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
       .step-flow::before { display: none; }
@@ -787,8 +856,9 @@
       <div class="nav-logo-sub">Automations</div>
     </a>
     <nav class="nav-links">
-      <a href="#how">How It Works</a>
+      <a href="#solutions">Solutions</a>
       <a href="#impact">Results</a>
+      <a href="#how">How It Works</a>
       <a href="#compare">Compare</a>
       <a href="#testimonial">Case Study</a>
       <a href="#contact">Contact</a>
@@ -811,13 +881,14 @@
     </div>
     <button id="mob-close" aria-label="Close menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M6 6l12 12M6 18L18 6" stroke="#0c1a62" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M6 6l12 12M6 18L18 6" stroke="#0d1f28" stroke-width="1.6" stroke-linecap="round"/>
       </svg>
     </button>
   </div>
   <nav class="mob-links">
-    <a href="#how">How It Works</a>
+    <a href="#solutions">Solutions</a>
     <a href="#impact">Results</a>
+    <a href="#how">How It Works</a>
     <a href="#compare">Compare</a>
     <a href="#testimonial">Case Study</a>
     <a href="#contact">Contact</a>
@@ -840,19 +911,19 @@
         <div class="hero-feats">
           <div class="hero-feat">
             <div class="feat-icon">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke="#38b6ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke="#2dc9b3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <span class="feat-label">Automated Pre-Visit<br>Patient Charts</span>
           </div>
           <div class="hero-feat">
             <div class="feat-icon">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="#38b6ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="#2dc9b3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <span class="feat-label">Live Dashboards<br>&amp; Scorecards</span>
           </div>
           <div class="hero-feat">
             <div class="feat-icon">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="#38b6ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="#2dc9b3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <span class="feat-label">More Incentives.<br>Less Manual Work.</span>
           </div>
@@ -895,6 +966,119 @@
   </div>
 </header>
 
+<!-- SOLUTIONS / TOOLS -->
+<section id="solutions" class="section-gray">
+  <div class="wrap">
+    <div class="tools-head">
+      <div>
+        <span class="section-tag">Solutions</span>
+        <h2 class="section-h2" style="font-size:clamp(28px,3.2vw,40px);">Tools &amp; Apps<br>Built for Your Team</h2>
+      </div>
+      <p class="section-sub">Each solution is developed inside your existing Microsoft 365 or Snowflake environment — no new licenses, no rip-and-replace. Your staff works where they already are.</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <!-- 1. Well Visit Tracker -->
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2zm7-7l1.5 1.5L16 12" stroke="#2dc9b3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="tool-tag">Microsoft 365 App</span>
+        </div>
+        <div class="tool-t">Well Visit Tracker</div>
+        <div class="tool-d">Schedule and track every pediatric and family patient due for a well visit. Built in Power Apps + SharePoint so your team can see who's due, who's booked, and who still needs outreach — all in one queue.</div>
+        <div class="tool-meta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Pediatric &amp; family well-visit outreach
+        </div>
+      </div>
+
+      <!-- 2. Chart Review App -->
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke="#2dc9b3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="tool-tag">Microsoft 365 App</span>
+        </div>
+        <div class="tool-t">Chart Review App</div>
+        <div class="tool-d">A streamlined workspace for providers to complete chart reviews, flag findings, and keep documentation audit-ready. No spreadsheets, no lost notes — every review tracked from open to signed-off.</div>
+        <div class="tool-meta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Provider chart reviews, structured
+        </div>
+      </div>
+
+      <!-- 3. COC Gap Closure Tracker -->
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 4v5h5M20 20v-5h-5M19.4 9A8 8 0 004.6 8m-.6 7a8 8 0 0014.8 1" stroke="#2dc9b3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="tool-tag">Microsoft 365 App</span>
+        </div>
+        <div class="tool-t">COC Gap Closure Tracker</div>
+        <div class="tool-d">Continuity of Care tracking built for Sunshine Health, with a guided closure workflow that moves every COC gap from identified → matched → outreach → closed. Nothing slips, and every dollar gets captured.</div>
+        <div class="tool-meta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Sunshine Health COC workflow
+        </div>
+      </div>
+
+      <!-- 4. Payor Incentive Consulting -->
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2dc9b3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="tool-tag">Consulting</span>
+        </div>
+        <div class="tool-t">Payor Incentive Consulting</div>
+        <div class="tool-d">Strategy and hands-on support to capture more from your insurance payor incentive programs — Sunshine, Ambetter, BCBS, Medicare and beyond. We find the measures that pay and build the path to close them.</div>
+        <div class="tool-meta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Maximize payor incentive revenue
+        </div>
+      </div>
+
+      <!-- 5. Report & Workflow Automation -->
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke="#2dc9b3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="#2dc9b3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="tool-tag">Automation</span>
+        </div>
+        <div class="tool-t">Report &amp; Workflow Automation</div>
+        <div class="tool-d">Turn manual, recurring reports and workflows into automated Python + Power Automate pipelines. The copy-paste busywork disappears, and your team gets time back for patient care.</div>
+        <div class="tool-meta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Automated reports &amp; workflows
+        </div>
+      </div>
+
+      <!-- 6. Automated UDS Measure Reports -->
+      <div class="tool-card">
+        <div class="tool-top">
+          <div class="tool-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="#2dc9b3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="tool-tag">Automation</span>
+        </div>
+        <div class="tool-t">Automated UDS Measure Reports</div>
+        <div class="tool-d">Payor- and department-level UDS measure reporting, generated on schedule with live drill-downs into every measure. Leadership sees performance in real time — no analyst rebuilding the same report each month.</div>
+        <div class="tool-meta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Payor &amp; department UDS reporting
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- PROVEN IMPACT -->
 <section id="impact" class="section-white" style="padding: 120px 0;">
   <div class="wrap">
@@ -909,25 +1093,25 @@
 
       <div class="step-flow">
         <div class="step">
-          <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="#38b6ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="#2dc9b3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="step-n">01</div>
           <div class="step-t">The Baseline</div>
           <div class="step-d">Manual gap closures yielded only $40k for the entire prior year.</div>
         </div>
         <div class="step">
-          <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke="#38b6ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="#38b6ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke="#2dc9b3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="#2dc9b3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="step-n">02</div>
           <div class="step-t">The Automation</div>
           <div class="step-d">Python pipelines and Power BI dashboards deployed for Ambetter/Sunshine gaps.</div>
         </div>
         <div class="step">
-          <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#38b6ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#2dc9b3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="step-n">03</div>
           <div class="step-t">The Result</div>
           <div class="step-d">$460,000 in COC closures processed in one month by one staff member.</div>
         </div>
         <div class="step">
-          <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#38b6ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="step-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#2dc9b3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           <div class="step-n">04</div>
           <div class="step-t">The Scale</div>
           <div class="step-d">This blueprint applies to all UDS and HEDIS metrics across your network.</div>
@@ -987,11 +1171,11 @@
         <p class="section-sub">Every feature is purpose-built for the FQHC context — not adapted from an enterprise tool.</p>
       </div>
       <div class="checklist">
-        <div class="check-row"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Built specifically for FQHCs</div>
-        <div class="check-row"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Payor-specific gap targeting</div>
-        <div class="check-row"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Proactive incentive forecasting</div>
-        <div class="check-row"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Rapid onboarding &amp; support</div>
-        <div class="check-row"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#22c55e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Scalable across your network</div>
+        <div class="check-row"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16a58f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Built specifically for FQHCs</div>
+        <div class="check-row"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16a58f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Payor-specific gap targeting</div>
+        <div class="check-row"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16a58f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Proactive incentive forecasting</div>
+        <div class="check-row"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16a58f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Rapid onboarding &amp; support</div>
+        <div class="check-row"><div class="check-dot"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#16a58f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Scalable across your network</div>
       </div>
     </div>
     <div class="table-scroll">
